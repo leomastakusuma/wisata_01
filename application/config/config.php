@@ -26,6 +26,6 @@ define('URL', 'http://localhost/Wisata/');
  */
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'php-mvc');
+define('DB_NAME', 'Wisata');
 define('DB_USER', 'root');
 define('DB_PASS', 'root');
