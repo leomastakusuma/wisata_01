@@ -6,13 +6,13 @@
 		<script type="text/javascript" src="<?php echo URL;?>public/bower_components/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="<?php echo URL;?>public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	</head>
-	<body>
-      <div class="container">
+	<body div class="bg-warning">
+    <div class="container bg-success">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
 				<div class="navbar-header">
-					 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="<?php echo URL;?>Wisata">Tourss & Travel</a>
+					 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="<?php echo URL;?>">Tour & Travel</a>
 				</div>
 				
 				<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
@@ -23,7 +23,7 @@
 						<li>
 							<a href="#">About</a>
 						</li>
-<!--						<li class="dropdown">
+					<!-- 	<li class="dropdown">
 							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
 							 <ul class="dropdown-menu">
 								<li>
@@ -46,7 +46,7 @@
 									<a href="#">One more separated link</a>
 								</li>
 							</ul>
-						</li>-->
+						</li> -->
 					</ul>
 					
 					<ul class="nav navbar-nav navbar-right">
@@ -81,6 +81,7 @@
 				</div>
 				
 			</nav>
+			<br>
 			<div class="carousel slide" id="carousel-857009">
 				<ol class="carousel-indicators">
 					<li data-slide-to="0" data-target="#carousel-857009">
@@ -131,36 +132,39 @@
           <br>
 	<div class="row clearfix">
 		<div class="col-md-12 column">
-                          <div class="row clearfix">
-                            <div class="col-md-3 column">
+		<hr>
+              <div class="row clearfix">
+                <div class="col-md-3 column">
 					<div class="list-group">
-                                              <a href="#" class="list-group-item active">Menu</a>
-                                              <a href="#" class="list-group-item">Login</a>
-                                              <a href="#" class="list-group-item">Sign Up</a>
-                                              <a href="#" class="list-group-item">Buku Tamu</a>
-                                        </div>
+                                  <a href="#" class="list-group-item active">Menu</a>
+                                  <a href="#" class="list-group-item">Login</a>
+                                  <a href="#" class="list-group-item">Sign Up</a>
+                                  <a href="#" class="list-group-item">Buku Tamu</a>
+                	</div>
 				</div>
+				
 				<div class="col-md-9 column">
 					<div class="row clearfix">
 						<div class="col-md-12 column">
-                                                            <!-- Paket Wisata-->
-                                                            <h2>
-                                                                Paket Wisata <hr>
-                                                            </h2>
-                                                            <div class="row">
-                                                                <div class="col-md-4">
-                                                                     <div class="thumbnail">
-                                                                        <img alt="300x200" src="<?php echo URL;?>public/img/pahawang.jpg" class="img-rounded" />
-                                                                        <div class="caption">
-                                                                                <h3>
-                                                                                        Pahawang Beach
-                                                                                </h3>
-                                                                                <p>
-                                                                                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                                                                </p>
-                                                                                <a href="#" class="btn btn-primary active btn-xs" type="button">Detail</a><span class="label label-default"></span><span class="label label-default"></span>	
-                                                                        </div>
-                                                                    </div>
+
+		                    <!-- Paket Wisata-->
+		                    <h2>
+		                        Paket Wisata <hr>
+		                    </h2>
+		                    <div class="row">
+		                        <div class="col-md-4">
+		                             <div class="thumbnail">
+		                                <img alt="300x200" src="<?php echo URL;?>public/img/pahawang.jpg" class="img-rounded" />
+		                                <div class="caption">
+		                                        <h3>
+		                                                Pahawang Beach
+		                                        </h3>
+		                                        <p>
+		                                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+		                                        </p>
+		                                        <a href="#" class="btn btn-primary active btn-xs" type="button">Detail</a><span class="label label-default"></span><span class="label label-default"></span>	
+		                                </div>
+		                            </div>
 								</div>
 								<div class="col-md-4">
 									<div class="thumbnail">
@@ -173,20 +177,53 @@
 												Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 											</p>
 											 <a href="#" class="btn btn-primary active btn-xs" type="button">Detail</a><span class="label label-default"></span><span class="label label-default"></span>	
+											 <!--Modal For Detail-->
+											<!-- Button trigger modal -->
+											<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
+											  Launch demo modal
+											</button>
+
+											<!-- Modal -->
+											<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											  <div class="modal-dialog">
+											    <div class="modal-content">
+											      <div class="modal-header">
+											        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+											        <h4 class="modal-title" id="myModalLabel">Kiluan Beach</h4>
+											      </div>
+											      <div class="modal-body">
+											       <p class="text-justify text-danger">
+											        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+											        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+											        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+											        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+											        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+											        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+											      </div>
+											      <div class="modal-footer">
+											        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											        <button type="button" class="btn btn-primary">Simpan</button>
+											        <a href="<?php echo URL?>home/nama" class="btn btn-primary btn-xs"> Exist</a>
+											      </div>
+											    </div>
+											  </div>
+											</div>
+
+											 <!--End Modal-->
 										</div>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="thumbnail">
-                                                                               <img alt="300x300" src="<?php echo URL;?>public/img/klara.jpg" class="img-rounded"/>
+                                           <img alt="300x300" src="<?php echo URL;?>public/img/klara.jpg" class="img-rounded"/>
 									        <h3>
-										     Kiluan Beach
-                                                                               </h3>
-                                                                               <p class="text-justify">
-                                                                                   Harga : Rp.120.0000 Per orang
+										    Kiluan Beach
+                                            </h3>
+                                           <p class="text-justify">
+                                           Harga : Rp.120.0000 Per orang
                                                                                   
-                                                                               </p>
-                                                                               <a href="#" class="btn btn-primary active btn-xs" type="button">Detail</a><span class="label label-default"></span><span class="label label-default"></span>	
+                                           </p>
+                                           <a href="#" class="btn btn-primary active btn-xs" type="button">Detail</a><span class="label label-default"></span><span class="label label-default"></span>	
 									</div>
 								</div>
 							</div>
@@ -211,24 +248,25 @@
 				</div>
 				
 			</div>
+					<!--Pagination-->
                      <div align="center">
-                                                                <ul class="pagination">
-                                                                  <li><a href="#">&laquo;</a></li>
-                                                                  <li><a href="#">1</a></li>
-                                                                  <li><a href="#">2</a></li>
-                                                                  <li><a href="#">3</a></li>
-                                                                  <li><a href="#">4</a></li>
-                                                                  <li><a href="#">5</a></li>
-                                                                  <li><a href="#">&raquo;</a></li>
-                                                                </ul>
-                                                            </div>    
-		</div>
-            
+                        <ul class="pagination">
+                          <li><a href="#">&laquo;</a></li>
+                          <li><a href="#">1</a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">5</a></li>
+                          <li><a href="#">&raquo;</a></li>
+                        </ul>
+                    </div>    
+		</div>       
              
 	</div>   
           
 </div>
             <hr>
+            <!--Footer-->
             <p class="text-center">
                 Copyright : Eticla21.com
             </p>

@@ -10,6 +10,8 @@ class Index extends Controller{
     
     public function index(){
 //        require_once 'application/templates/user.php';
+      
+
        require_once 'application/views/index/index.html';
         
         
