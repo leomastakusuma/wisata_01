@@ -57,10 +57,10 @@ class Application
             }
         } else {
             // invalid URL, so simply show home/index
-//          untuk Mengarahkan ke alamat default
+            // untuk Mengarahkan ke alamat default
             require './application/controller/index.php';
             $home = new Index();
-            $home->index();
+            $home->nama();
         }
     }
 

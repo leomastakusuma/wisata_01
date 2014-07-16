@@ -6,8 +6,21 @@
 		<script type="text/javascript" src="<?php echo URL;?>public/bower_components/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="<?php echo URL;?>public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	</head>
-	<body div class="bg-warning">
-    <div class="container bg-success">
+	<body>
+
+	<?php
+if(!empty($warning))
+{  ?>
+	<div class="bg-warning">
+		<p>Errorr</p>
+	</div>
+	<?php
+	// die;
+}
+
+?>
+
+    <div class="container ">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
@@ -81,8 +94,8 @@
 				</div>
 				
 			</nav>
-			<br>
-			<div class="carousel slide" id="carousel-857009">
+			<hr>
+			<div class="carousel slide" id="carousel-857009" data-interval="3000" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<li data-slide-to="0" data-target="#carousel-857009">
 					</li>
@@ -137,7 +150,7 @@
                 <div class="col-md-3 column">
 					<div class="list-group">
                                   <a href="#" class="list-group-item active">Menu</a>
-                                  <a href="#" class="list-group-item">Login</a>
+                                  <a href="#" class="list-group-item" data-toggle="tooltip" data-placement="top" title="Login User">Login</a>
                                   <a href="#" class="list-group-item">Sign Up</a>
                                   <a href="#" class="list-group-item">Buku Tamu</a>
                 	</div>
@@ -180,7 +193,7 @@
 											 <!--Modal For Detail-->
 											<!-- Button trigger modal -->
 											<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
-											  Launch demo modal
+											  Pesan &raquo
 											</button>
 
 											<!-- Modal -->
@@ -189,21 +202,32 @@
 											    <div class="modal-content">
 											      <div class="modal-header">
 											        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-											        <h4 class="modal-title" id="myModalLabel">Kiluan Beach</h4>
+											        <h4 class="modal-title" id="myModalLabel">Pesan</h4>
 											      </div>
 											      <div class="modal-body">
 											       <p class="text-justify text-danger">
-											        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-											        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-											        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-											        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-											        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-											        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+											       	<table width="50%">
+											       		<form class="form-horizontal" role="form" method="post" action="<?php echo URL;?>home/test">
+														<tr>
+															<td>Nama</td>
+															<td>:</td>
+															<td> <input type="text" class="form-control" name="tex" size="5" maxlength="5"></td>
+														</tr>
+															
+														<tr>
+															<td colspan="3" align="right">
+																<input type="submit" name="simpan" value="simpan" class="btn btn-default">
+															</td>
+														</tr>
+													</form>
+
+											       	</table>
+											       	</p>
 											      </div>
 											      <div class="modal-footer">
 											        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 											        <button type="button" class="btn btn-primary">Simpan</button>
-											        <a href="<?php echo URL?>home/nama" class="btn btn-primary btn-xs"> Exist</a>
+											        <a href="<?php echo URL?>home/test" class="btn btn-primary btn-xs"> Exist</a>
 											      </div>
 											    </div>
 											  </div>
@@ -237,7 +261,7 @@
                                                                 <p class="text-justify">Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien.
                                                                    Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>
                                                                    Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-                                                                </p> <a href="#" class="btn btn-success active btn-xs" type="button">Detail</a><span class="label label-default"></span><span class="label label-default"></span>
+                                                                </p> <a href="<?php echo URL?>news" class="btn btn-success active btn-xs" type="button">Detail</a><span class="label label-default"></span><span class="label label-default"></span>
 
                                                             </div>
                                                             
@@ -272,3 +296,4 @@
             </p>
 	</body>
 </html>
+
