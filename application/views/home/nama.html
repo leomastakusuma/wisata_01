@@ -2,15 +2,38 @@
 		<div class="row clearfix">
 						<div class="col-md-12 column">
               <!-- Paket Wisata-->
+             
               <?php
-              	if(!empty($data))
-              	{
-              		echo "<pre>";
-              		print_r($data);
+              	if(!empty($form))
+              	{ ?>
+                  <div class="alert alert-warning" role="alert">
+                  <h3> <p class="bold"> Error Message !!</p></h3><hr>
+              		<?php 
+                  foreach ($form as $msg) {
+                    echo $msg.'<br>';
+                    # code...
+                  }
               	}
               ?>                                                                       
               <!-- Berita -->
-         
+
+              </div>
+              <h2>
+                 <p class="bold">The Test</p>
+              <hr>
+              </h2>
+                <form class="navbar-form navbar-left" role="search" action="<?php echo URL?>home/getall" method="post">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nama" size="50" name="nama" value="<?php if (isset($form['nama'])) echo $form['nama'];?>">
+                    <input type="text" class="form-control" placeholder="Alamat" size="50" name="alamat">
+                    <input type="text" class="form-control" placeholder="Umur" size="50" name="umur">
+                    <input type="text" class="form-control" placeholder="Tempat Tanggal Lahir" size="50" name="ttl">
+                  </div>
+                 <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+
+
+
           </div>				
         </div>
 </div>
