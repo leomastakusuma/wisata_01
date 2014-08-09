@@ -3,12 +3,13 @@
 /**
  * This is the "base controller class". All other "real" controllers extend this class.
  */
-class Controller
+class Controller 
 {
     /**
      * @var null Database Connection
      */
     public $db = null;
+    
 
     /**
      * Whenever a controller is created, open a database connection too. The idea behind is to have ONE connection
@@ -48,5 +49,8 @@ class Controller
         require 'application/models/' . strtolower($model_name) . '.php';
         // return new model (and pass the database connection to the model)
         return new $model_name($this->db);
-    }
+    }  
+    
+   
+    
 }

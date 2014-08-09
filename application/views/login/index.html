@@ -1,0 +1,15 @@
+<table border="1" cellspacing="0" cellpading="0">
+    <tr>
+<?php
+    if(isset($user)){
+        foreach($user as $row){
+            ?> 
+            <td><?php echo $row->id ?></td>
+            <td><?php echo $row->user ?></td>
+            <td><?php echo $row->pass ?></td>
+            <?php
+        }
+    }
+?>
+    </tr>
+</table>

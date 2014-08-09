@@ -12,7 +12,9 @@ class News extends Controller{
 
 
 	public function news(){
-		echo 'Kumpulan Berita';
+            $user = $this->loadModel('user');
+            pr($user);
+            
 	}
 
 }
