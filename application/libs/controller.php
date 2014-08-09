@@ -7,9 +7,13 @@ class Controller
 {
     /**
      * @var null Database Connection
+     * @value 'aaa';
      */
-    public $db = null;
     
+    public $db = null;
+    public $array  ;
+
+
 
     /**
      * Whenever a controller is created, open a database connection too. The idea behind is to have ONE connection
@@ -51,6 +55,19 @@ class Controller
         return new $model_name($this->db);
     }  
     
-   
+    public function redirect($value){
+        $url  = 'http://' . $_SERVER['HTTP_HOST'];            // Get the server
+        $url .= rtrim(dirname($_SERVER['PHP_SELF']), '/\\'); // Get the current directory
+        $url .= '/';
+        $url .= $value;            // <-- Your relative path
+        header('Location: ' . $url, true, 302);        
+    }
+    
+    public function view($controller,$action,$data){
+
+        $this->array = $data;
+        require 'application/views/'.$controller.'/'.$action.'.html';
+        
+    }
     
 }

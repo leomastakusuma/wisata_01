@@ -1,9 +1,15 @@
-<table border="1" cellspacing="0" cellpading="0">
+<table border="1" cellspacing="0" cellpading="0" align="center" width="50%">
     <tr>
+        <td>No</td>
+        <td>User Name</td>
+        <td>Password</td>
+    </tr>
+    
 <?php
-    if(isset($user)){
-        foreach($user as $row){
+    if(isset($data)){
+        foreach($data as $row){
             ?> 
+            <tr>
             <td><?php echo $row->id ?></td>
             <td><?php echo $row->user ?></td>
             <td><?php echo $row->pass ?></td>
@@ -11,5 +17,6 @@
         }
     }
 ?>
+
     </tr>
 </table>

@@ -32,15 +32,20 @@ class Models extends Controller{
         $sql  = "DELETE FROM {$table}";
         $sql .= "WHERE [$where] = [$conditon]";
         $query = $this->db->prepare($sql);
-        return $query->execute();
+        $query->execute();
     }
     
     public function insert($table,$values){
         $sql    = "INSERT INTO {$table} VALUES {$values}";
         $query  = $this->db->prepare($sql);
-        return $query->execute;
+        $query->execute;
     }
     
+    public function update($table,$set,$values,$where){
+        $sql    = "UPDATE {$table} SET {$set} = {$values} WHERE {$where}";
+        $query  = $this->db->prepare($sql);
+        $query->execute;
+    }
     
     
 }

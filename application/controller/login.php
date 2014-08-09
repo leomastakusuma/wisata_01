@@ -5,6 +5,8 @@ class login extends Controller {
 
 
     public function index(){
+        
+       
         $usermodel = $this->loadModel('user');
         $user      = $usermodel->getalluser();
 //        echo $user = $this->model();
@@ -47,12 +49,8 @@ class login extends Controller {
     public function tesfunc(){
         $usermodel  = $this->loadModel('user');
         $user       = $usermodel->getuser();
-//        $this->views('login');
-//        require 'application/views/login/index.html';
-//        echo $_GET['url'];
-       
-
-          
+        $this->view('login','index',$user);
+                 
     }
     
     
