@@ -5,17 +5,12 @@ class login extends Controller {
 
 
     public function index(){
-        
+      require_once 'application/templates/header.html';
+		 		require_once 'application/templates/menu.html';
+//				require_once"application/views/home/nama.html"; 
+				$this->view('login', 'login');
+                                require_once 'application/templates/footer.php';
        
-        $usermodel = $this->loadModel('user');
-        $user      = $usermodel->getalluser();
-//        echo $user = $this->model();
-//        die;
-        foreach ($user as $row){
-            echo 'ID    =   '. $row->id.'<br>';
-            echo 'User  =   '.$row->user.'<br>';
-            echo 'Pass  =   '.$row->pass;
-        }
     }
     
     public function cari(){
@@ -47,12 +42,16 @@ class login extends Controller {
     }
     
     public function tesfunc(){
+        
+      
         $usermodel  = $this->loadModel('user');
         $user       = $usermodel->getuser();
-        $this->view('login','index',$user);
-                 
+           $this->view('login','index',$user);
     }
     
-    
+    public function proces(){
+        $data = $_POST;
+        print_r($data);
+    }
 }
     

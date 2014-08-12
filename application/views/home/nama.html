@@ -26,8 +26,9 @@
                 <form class="form-horizontal" action="<?php echo URL?>home/getall" method="post">
                   
                     
-                    <input type="text" class="form-control" placeholder="Umur" size="5" name="umur" maxlength="10">
-                    <input type="text" class="form-control" placeholder="Tempat Tanggal Lahir" size="50" name="ttl">
+                    <input type="text" class="form" placeholder="Umur" size="5" name="umur" maxlength="10" 
+                           value="<?php if(isset($form['umur'])) echo $form['umur'] ?>"><br>
+                    <input type="text" class="form" placeholder="Tempat Tanggal Lahir" size="50" name="ttl">
                  
                  <button type="submit" class="btn btn-default">Submit</button>
                 </form>

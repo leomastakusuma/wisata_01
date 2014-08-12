@@ -1,3 +1,4 @@
+<title>Wisata</title>
 <table border="1" cellspacing="0" cellpading="0" align="center" width="50%">
     <tr>
         <td>No</td>
@@ -15,6 +16,9 @@
             <td><?php echo $row->pass ?></td>
             <?php
         }
+    }
+    else {
+        $this->redirect('login');
     }
 ?>
 

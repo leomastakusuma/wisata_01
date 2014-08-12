@@ -28,11 +28,12 @@ class Home extends Controller{
 	public function getall(){
 		
 			$form 	= $_POST;
+//                        print_r($form);die;
 			if(isset($form)){
 				require_once 'application/templates/header.html';
 		 		require_once 'application/templates/menu.html';
 				require_once"application/views/home/nama.html";
-                require_once 'application/templates/footer.php';
+                                require_once 'application/templates/footer.php';
 			}
 
 	}

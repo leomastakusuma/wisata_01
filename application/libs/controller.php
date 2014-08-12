@@ -64,10 +64,13 @@ class Controller
     }
     
     public function view($controller,$action,$data){
-
-        $this->array = $data;
+        if(!empty($data)){
+        $this->array = $data;}
+//        $titlee  = '<title>$title</title>';
         require 'application/views/'.$controller.'/'.$action.'.html';
+//        $this->load->view =$data;
         
     }
+    
     
 }
