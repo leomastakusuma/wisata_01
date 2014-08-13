@@ -1,7 +1,8 @@
 <?php
 class login extends Controller {
     
-    private $table ='user';
+    private $table ='login';
+    
 
 
     public function index(){

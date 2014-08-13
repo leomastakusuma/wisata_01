@@ -36,7 +36,8 @@ class Models extends Controller{
     }
     
     public function insert($table,$values){
-        $sql    = "INSERT INTO {$table} VALUES {$values}";
+        $data   = array($values);
+        $sql    = "INSERT INTO {$table} VALUES {$data}";
         $query  = $this->db->prepare($sql);
         $query->execute;
     }
