@@ -28,7 +28,7 @@
        <label for="alamat">Alamat</label>
        <textarea class="form-control" placeholder="Alamat" name="alamat" ><?php if(!empty($form['alamat'])) echo $form['alamat'] ?></textarea><br>
        <label for="ttl">Tanggal Lahir</label>
-       <input type="text"  class="form-control" name="ttl" placeholder="1990-06-23" value="<?php if(!empty($form['ttl'])) echo $form['ttl'] ?>"><br>
+       <input type="text"  id="datepicker" class="form-control" name="ttl" placeholder="1990-06-23" value="<?php if(!empty($form['ttl'])) echo $form['ttl'] ?>"><br>
        <label for="Jenis Kelamin">Jenis Kelamin</label>
        <select class="form-control" name='jeniskelamin'>
         <option value="<?php if(!empty($form['jeniskelamin'])) {echo $form['jeniskelamin'];} else{ echo '--Pilih--';}?>"> 
@@ -55,3 +55,29 @@
 </div>
     </div>
 </div>
+<script>
+			$(function()
+						{
+							$("#datepicker").datepicker({
+								changeMonth: true,
+								changeYear : true,
+								dateFormat : 'yy-dd-mm',
+								yearRange  : '-10:+10'	});
+						
+						}
+			)
+</script>
+<!-- memanggil datepicker sebagai tanggal akhir -->            
+<script>
+			$(function()
+						{
+							$("#datepicker2").datepicker({
+								changeMonth: true,
+								changeYear : true,
+								dateFormat : 'yy-dd-mm',
+								yearRange  : '-10:+10'	});
+						
+						}
+			)
+</script>
+<?php 
