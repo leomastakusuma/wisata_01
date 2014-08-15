@@ -119,4 +119,7 @@ class signup extends Controller{
          }
          
     }
+    public function succes(){
+        require 'application/views/signup/succes.html';
+    }
 }
