@@ -71,6 +71,7 @@ class Controller
 //        $this->load->view =$data;
         
     }
+
     
-    
+
 }

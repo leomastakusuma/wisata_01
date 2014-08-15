@@ -18,24 +18,20 @@ class signupmodels extends Models{
      
         
     }
-    public function insertSignUP($nama,$alamat,$ttl,$jeniskelamin,$email,$username,$password,$tgl_registasi){
+    public function insertSignUP($nama,$alamat,$notlp,$email,$username,$password,$tgl_registasi){
         
         
         $data          = array(':nama'           =>$nama,
                                ':alamat'         =>$alamat,
-                               ':ttl'            =>$ttl,
-                               ':jeniskelamin'   =>$jeniskelamin,
+                               ':notelp'         =>$notlp,
                                ':email'          =>$email,
                                ':username'       =>$username,
                                ':password'       =>$password,
                                ':tgl_registrasi' =>$tgl_registasi
                                );
         
-        
-        
-     
-        $sql = "INSERT INTO {$this->table} (nama, alamat, ttl,jeniskelamin,email,username,password,tgl_registrasi)";
-        $sql .= "VALUES (:nama, :alamat, :ttl, :jeniskelamin, :email, :username, :password, :tgl_registrasi)";
+        $sql = "INSERT INTO {$this->table} (nama, alamat, notelp,email,username,password,tgl_registrasi)";
+        $sql .= "VALUES (:nama, :alamat, :notelp, :email, :username, :password, :tgl_registrasi)";
         $query = $this->db->prepare($sql);
         $query->execute($data);
         
