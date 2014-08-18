@@ -80,6 +80,7 @@ class signup extends Controller{
        
          if(!empty($form)){
                     //Validasi Form
+                    $msg=array();
                     if(!validname($nama)){
                         $msg[] = 'Format Nama Salah';
                     }
@@ -99,7 +100,9 @@ class signup extends Controller{
                         $msg[] = 'Password Mininal 6 Karakter';
                     }
              //Jika Terdapat Kembali Ke Form Dengan Msg.
-             if(count($msg)>= 1){
+            
+            $msgs=count($msg);
+            if($msgs > 0){
                     $errormsg=$msg;
                     require 'application/templates/header.html';
                     require 'application/templates/menu.html';
@@ -114,7 +117,8 @@ class signup extends Controller{
 //                 echo $tgl_registrasi;
              $model = $this->loadModel($this->model);
              $simpan =$model->insertSignUP($nama,$alamat,$notlp,$email,$username,$password,$tgl_registrasi);
-             $this->redirect('signup/getall');
+//             $this->redirect('signup/succes');
+                require 'application/views/signup/succes.html';
              }
          }
          

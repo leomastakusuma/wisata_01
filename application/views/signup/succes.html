@@ -15,15 +15,22 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <!--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>-->
+        <h4 class="modal-title" id="myModalLabel">Selamat!, Anda berhasil registirasi,silahkan simpan data dibawah ini.</h4>
       </div>
       <div class="modal-body">
-        ...
+        <?php if(!empty($form))
+                {
+                
+                echo '<strong>Username = </strong>'.$username.'<br>';
+                echo '<strong>Password = </strong>'.$password;
+               
+                }              
+        ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+          <a href="<?php echo URL?>" class="btn btn-default">Close</a>
+          <a href="<?php echo URL?>home/test" class="btn btn-default">Login</a>
       </div>
     </div>
   </div>

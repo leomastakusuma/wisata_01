@@ -6,11 +6,7 @@ class login extends Controller {
 
 
     public function index(){
-      require_once 'application/templates/header.html';
-		 		require_once 'application/templates/menu.html';
-//				require_once"application/views/home/nama.html"; 
-				$this->view('login', 'login');
-                                require_once 'application/templates/footer.php';
+        require 'application/views/login/index.html';
        
     }
     
@@ -50,7 +46,8 @@ class login extends Controller {
            $this->view('login','index',$user);
     }
     
-    public function proces(){
+    public function proses(){
+        echo '<pre>';
         $data = $_POST;
         print_r($data);
     }
