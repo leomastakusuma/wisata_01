@@ -1,9 +1,5 @@
 <?php
 class login extends Controller {
-    
-    private $table ='login';
-    
-
 
     public function index(){
         require 'application/views/login/index.html';
@@ -47,9 +43,43 @@ class login extends Controller {
     }
     
     public function proses(){
-        echo '<pre>';
-        $data = $_POST;
-        print_r($data);
+       $form = $_POST;
+       $username = $form['username'];
+       $password = $form['password'];
+       
+       if(!empty($form)){
+            $msg = array();
+                if(empty($username)){
+                    $msg[] = 'Username Tidak Boleh Kosong';
+                }
+                if(empty($password)){
+                    $msg[] = 'Password Tidak Boleh Kosong';
+                }
+                
+            if(count($msg)>0){
+                $error_msg = $msg;
+                require 'application/views/login/index.html';
+            }
+           
+            else {
+                $login   = $this->loadModel('loginmodels');
+                $prosess = $login->loginaction($username,$password);
+                if(count($prosess)>0){
+                    $form['create']=  date('Y-d-m');
+                    $_SESSION = $username.'-'.$form['create'];
+                    require 'application/templates/user/header.html';
+                }
+                else{
+                   echo "<script>alert('username dan password salah !!')</script>";
+                   require 'application/views/login/index.html';
+
+                }
+            }
+            
+       }
+        
+      
+      
     }
 }
     

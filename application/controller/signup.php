@@ -81,24 +81,25 @@ class signup extends Controller{
          if(!empty($form)){
                     //Validasi Form
                     $msg=array();
-                    if(!validname($nama)){
+                    if(!validname($nama) || empty($nama)){
                         $msg[] = 'Format Nama Salah';
                     }
-                    if(!validaddres($alamat)){
+                    if(!validaddres($alamat) || empty($alamat)){
                         $msg[] = 'Format Alamat Salah';
                     }
-                    if(!is_numeric($notlp)){
+                    if(!is_numeric($notlp) || empty($notlp)){
                         $msg[] = 'Format No Telp Salah';
                     }
-                    if(!validateEmail($email)){
+                    if(!validateEmail($email) || empty($email)){
                         $msg[] = 'Format Email Salah';
                     }
-                    if(strlen($username)<5){
+                    if(strlen($username)<5 || empty($username)){
                         $msg[] = 'Username Minimal 5 Karakter';
                     }
-                    if(strlen($password)<6){
+                    if(strlen($password)<6 || empty($password)){
                         $msg[] = 'Password Mininal 6 Karakter';
                     }
+                    
              //Jika Terdapat Kembali Ke Form Dengan Msg.
             
             $msgs=count($msg);
