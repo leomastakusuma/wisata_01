@@ -7,14 +7,16 @@
  */
 
 class loginmodels extends Models{
-    private $_table ='registrasi';
+    private $_table ='user';
     
     public function loginaction($username,$password){
-        $sql  = "select * from {$this->_table} Where username = :username and password = :password ";
-        $query = $this->db->prepare($sql);
-        $data = array(':username' => $username,
-                      ':password' => $password);
-                 
+        $level  = 'user';
+        $sql    = "select * from {$this->_table} Where user = :username and pass = :password and level = :level ";
+        $query  = $this->db->prepare($sql);
+        $data   = array(':username' => $username,
+                        ':password' => $password,
+                        ':level'    => $level);
+                        
         $query->execute($data);
         return $query->fetchAll();
 

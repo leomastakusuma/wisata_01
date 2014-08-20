@@ -67,7 +67,7 @@ class login extends Controller {
                 if(count($prosess)>0){
                     $form['create']=  date('Y-d-m');
                     $_SESSION = $username.'-'.$form['create'];
-                    require 'application/templates/user/header.html';
+                    $this->redirect('home/news');
                 }
                 else{
                    echo "<script>alert('username dan password salah !!')</script>";

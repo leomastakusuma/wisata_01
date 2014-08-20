@@ -90,9 +90,9 @@ class signup extends Controller{
                     if(!is_numeric($notlp) || empty($notlp)){
                         $msg[] = 'Format No Telp Salah';
                     }
-                    if(!validateEmail($email) || empty($email)){
-                        $msg[] = 'Format Email Salah';
-                    }
+//                    if(!validateEmail($email) || empty($email)){
+//                        $msg[] = 'Format Email Salah';
+//                    }
                     if(strlen($username)<5 || empty($username)){
                         $msg[] = 'Username Minimal 5 Karakter';
                     }
@@ -116,9 +116,16 @@ class signup extends Controller{
 //                 echo '<pre>';
 //                 print_r($form);
 //                 echo $tgl_registrasi;
-             $model = $this->loadModel($this->model);
-             $simpan =$model->insertSignUP($nama,$alamat,$notlp,$email,$username,$password,$tgl_registrasi);
-//             $this->redirect('signup/succes');
+             // insert into table sign
+             $model         = $this->loadModel($this->model);
+             $simpan        =$model->insertSignUP($nama,$alamat,$notlp,$email,$username,$password,$tgl_registrasi);
+//             $id_registrasi =$model->countid();
+//             echo $id_registrasi;die;
+             
+             //insert into table user
+             $modeluser     = $this->loadModel('usermodels');
+             $simpanuser    = $modeluser->insertuser($username,$password);
+             
                 require 'application/views/signup/succes.html';
              }
          }

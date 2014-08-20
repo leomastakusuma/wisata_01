@@ -36,4 +36,14 @@ class signupmodels extends Models{
         $query->execute($data);
         
    }
+   
+   public function countid(){
+        $sql = "SELECT COUNT(id_registrasi) AS userid FROM {$this->table}";
+        $query = $this->db->prepare($sql);
+        $query->execute();
+
+        // fetchAll() is the PDO method that gets all result rows
+        return $query->fetch()->userid;
+   }
+   
 }
