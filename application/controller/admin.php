@@ -24,4 +24,7 @@ class admin extends Controller {
         views($title, $body, $foter);
                 
     }
+    public function table(){
+        require 'application/templates/admin/tables.html';
+    }
 }
