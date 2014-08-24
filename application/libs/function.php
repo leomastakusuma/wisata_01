@@ -51,14 +51,14 @@ function validateEmail($email)
 		{
 			$isValid = false;
 		}
-		else if (!preg_match('/^[A-Za-z0-9\\-\\.]+$/', $domain))
-		{
-			$isValid = false;
-		}
-		else if (preg_match('/\\.\\./', $domain))
-		{
-			$isValid = false;
-		}
+//		else if (!preg_match('/^[A-Za-z0-9\\-\\.]+$/', $domain))
+//		{
+//			$isValid = false;
+//		}
+////		else if (preg_match('/\\.\\./', $domain))
+//		{
+//			$isValid = false;
+//		}
 		else if (!preg_match('/^(\\\\.|[A-Za-z0-9!#%&`_=\\/$\'*+?^{}|~.-])+$/', str_replace("\\\\", "", $local)))
 		{
 			if (!preg_match('/^"(\\\\"|[^"])+"$/', str_replace("\\\\", "", $local)))
@@ -66,10 +66,10 @@ function validateEmail($email)
 				$isValid = false;
 			}
 		}
-		if ($isValid && !(checkdnsrr($domain, "MX") || checkdnsrr($domain, "A")))
-		{
-			$isValid = false;
-		}
+//		if ($isValid && !(checkdnsrr($domain, "MX") || checkdnsrr($domain, "A")))
+//		{
+//			$isValid = false;
+//		}
 	}
 	return $isValid;
 }
